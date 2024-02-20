@@ -1,0 +1,96 @@
+#root {
+  width: 150%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.qbox{
+  width: 100%;
+  padding: 20px;
+}
+.start{
+  font-size: xx-large;
+  font-weight: 800;
+  text-decoration: none;
+  color: white;
+  
+}
+.black{
+  background-color: black;
+  border: 0.5 px solid white;
+  padding: 10px;
+}
+.whiteop{
+  background-color:#EFE5E5;
+  border-radius:20px;
+  box-shadow:7px 4px rgb(141, 137, 137);
+  font-size: 25px;
+  font-style: italic;
+  border: 0.5px solid black;
+}
+.rev{
+  transform: rotate(180deg);
+}
+img{
+  border-radius: 20px;
+}
+.op{
+  background-color:black;
+  border-radius:20px;
+  box-shadow:7px 4px rgb(141, 137, 137);
+  font-size: 25px;
+  font-style: italic;
+  border: 0.5px solid white;
+  cursor: pointer;
+}
+.ops{
+  display:grid;
+  width: 95%;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+.re{
+  display: flex;
+  justify-content: space-between;
+}
+.white{
+  color: black;
+  background-color: #C8ADAD;
+  box-shadow:7px 4px black ;
+  padding: 10px;
+}
+dialog{
+  width: 50%;
+  height: 40vh;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+}
+dialog::backdrop{
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter: blur(10px);
+
+}
+button{
+  background-color: rgba(28, 111, 28, 0.713);
+  width: 200px;
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  font-size: large;
+}
+@media all and (max-width:600px) {
+  .ops{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .quesion{
+    font-size: x-large;
+    padding: 5px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+  }
+  .op,.whiteop{
+    width: 300px;
+  }
+}
