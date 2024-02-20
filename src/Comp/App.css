@@ -13,12 +13,22 @@
   font-weight: 800;
   text-decoration: none;
   color: white;
-  
+
 }
 .black{
   background-color: black;
   border: 0.5 px solid white;
   padding: 10px;
+}
+.op:hover{
+  background-color: white;
+  color: black;
+  box-shadow: white;
+}
+.whiteop:hover{
+  background-color: black;
+  color: white;
+  box-shadow: black;
 }
 .whiteop{
   background-color:#EFE5E5;

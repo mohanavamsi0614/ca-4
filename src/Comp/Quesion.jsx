@@ -25,6 +25,12 @@ function Que() {
     }
     function togle(){
          settoggle(!toggle)
+         if (toggle){
+         document.body.style.backgroundColor="#e7dcdc"
+        }
+        else{
+            document.body.style.backgroundColor="#1B1B1B"
+        }
     }
     return(
         <div className={toggle?"black":"white"}>
