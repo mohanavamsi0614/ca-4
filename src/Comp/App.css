@@ -69,6 +69,26 @@ img{
   box-shadow:7px 4px black ;
   padding: 10px;
 }
+.remove{
+  width: 150px;
+  height: 40px;
+  background-color: green;
+}
+.hi{
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.highlet{
+  width: 150px;
+  height: 40px;
+  background-color: red;
+
+}
+.high{
+  color: rgb(168, 41, 41);
+}
 dialog{
   width: 50%;
   height: 40vh;

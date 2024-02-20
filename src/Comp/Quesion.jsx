@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function Que() {
     const [result,setresult]=useState({Attempted:0,correct:0,wrong:0})
     const [curr,setcurr]=useState(0)
+    const [high,sethigh]=useState(false)
     const [toggle,settoggle]=useState(true)
     const ref=useRef()
     const questions=question
@@ -37,13 +38,17 @@ function Que() {
         <h1 className={toggle?"bulb":"rev bulb"} onClick={togle}>💡</h1>
         <h3>{curr+1}/{question.length}</h3>
             <div className="qbox">
-                <h1 className="quesion">{questions[curr].text}</h1>
+                <h1 className={high?"high quesion": "quesion"}>{questions[curr].text}</h1>
                 <div className="ops">
                 {questions[curr].options.map((i)=>(
                     <div key={i.id} className={toggle?"op":"whiteop"} onClick={()=>{add(i)}}>
                     <p>{i.text}</p>
                     </div>
                 ))}
+                </div>
+                <div className="hi">
+                <button className="highlet" onClick={()=>sethigh(true)}>Highlet</button>
+                <button className="remove" onClick={()=>sethigh(false)}>Remove Highlet</button>
                 </div>
             </div>
                 <dialog ref={ref}>
