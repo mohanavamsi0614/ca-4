@@ -19,11 +19,12 @@ function Que() {
         if(i.isCorrect){
             setresult((pre)=>pre+1)
         }
-        
         }
-        else{
+        else if (curr==questions.length-1 && i.isCorrect){
+            setresult(result+1)
             call()
         }
+
         console.log(i,result)
 
     }
@@ -57,8 +58,8 @@ function Que() {
                 <dialog ref={ref}>
                 <div>
                     <h2>Result❕</h2>
-                    <h2>{((result>1?result+1:result)/questions.length)*100}%</h2>
-                    <h2>{result>1?result+1:result} out of 5 correct.</h2>
+                    <h2>{((result)/questions.length)*100}%</h2>
+                    <h2>{result} out of 5 correct.</h2>
                     <Link to={"/"}><button>Replay😎</button></Link>
                 </div>
                 </dialog>
