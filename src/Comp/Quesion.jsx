@@ -8,6 +8,9 @@ function Que() {
     const [high,sethigh]=useState(false)
     const [toggle,settoggle]=useState(true)
     const ref=useRef()
+    function call(){
+        ref.current.showModal()
+    }
     const questions=question
     function add(i){
         if(curr<questions.length-1){
@@ -16,9 +19,10 @@ function Que() {
         if(i.isCorrect){
             setresult((pre)=>pre+1)
         }
+        
         }
         else{
-            ref.current.showModal()
+            call()
         }
         console.log(i,result)
 
@@ -53,8 +57,8 @@ function Que() {
                 <dialog ref={ref}>
                 <div>
                     <h2>Result❕</h2>
-                    <h2>{((result==4&&curr==4?result+1:result)/questions.length)*100}%</h2>
-                    <h2>{result==4&&curr==4?result+1:result} out of 5 correct.</h2>
+                    <h2>{((result>1?result+1:result)/questions.length)*100}%</h2>
+                    <h2>{result>1?result+1:result} out of 5 correct.</h2>
                     <Link to={"/"}><button>Replay😎</button></Link>
                 </div>
                 </dialog>
