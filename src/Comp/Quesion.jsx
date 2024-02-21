@@ -14,15 +14,19 @@ function Que() {
     const questions=question
     function add(i){
         if(curr<questions.length-1){
-            setcurr(curr+1)
-
-        if(i.isCorrect){
-            setresult((pre)=>pre+1)
+        setcurr(curr+1)
+         if(i.isCorrect){
+            setresult({...result,Attempted:result.Attempted+1,correct:result.correct+1})
         }
+        else{
+            setresult({...result,Attempted:result.Attempted+1,wrong:result.wrong+1})
         }
         else if (curr==questions.length-1 && i.isCorrect){
             setresult(result+1)
             call()
+        }
+        else{
+            ref.current.showModal()
         }
 
         console.log(i,result)
