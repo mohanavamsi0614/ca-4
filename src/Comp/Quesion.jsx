@@ -3,12 +3,14 @@ import question from "../quesions";
 import "./App.css"
 import { Link } from "react-router-dom";
 function Que() {
+    // adding  the required states 
     const [result,setresult]=useState(0)
     const [curr,setcurr]=useState(0)
     const [high,sethigh]=useState(false)
     const [toggle,settoggle]=useState(true)
-    const ref=useRef()
+    const ref=useRef() //using ref too accsess the dom for oppening the modall 
     function call(){
+        // opinging the modal
         ref.current.showModal()
     }
     const questions=question
